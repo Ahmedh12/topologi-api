@@ -6,10 +6,10 @@ public class component {
     private String type;
     private String id;
     private String property;
-    HashMap<String, Integer> propertyValues = new HashMap<String, Integer>();
+    HashMap<String, Number> propertyValues = new HashMap<String, Number>();
     HashMap<String, String> netList = new HashMap<String, String>();
 
-    public component(String type, String id, String property,HashMap<String, Integer> propertyValues,HashMap<String, String> netList) {
+    public component(String type, String id, String property,HashMap<String, Number> propertyValues,HashMap<String, String> netList) {
         this.type = type;
         this.id = id;
         this.property = property;
@@ -29,7 +29,7 @@ public class component {
         return property;
     }
 
-    public HashMap<String, Integer> getPropertyValues() {
+    public HashMap<String, Number> getPropertyValues() {
         return propertyValues;
     }
 
@@ -37,7 +37,7 @@ public class component {
         return netList;
     }
 
-    public void setPropertyValues(HashMap<String, Integer> propertyValues) {
+    public void setPropertyValues(HashMap<String, Number> propertyValues) {
         this.propertyValues = propertyValues;
     }
 
@@ -59,6 +59,6 @@ public class component {
 
     @Override
     public String toString() {
-        return "component{" + "type=" + type + ", id=" + id + ", property=" + property + ", propertyValues=" + propertyValues + ", netList=" + netList + '}';
+        return "component{" + "type= " + type + ", id= " + id + ", property= " + property + ", propertyValues= " + propertyValues + ", netList= " + netList + '}';
     }
 }

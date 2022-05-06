@@ -21,7 +21,7 @@ public final class topology {
 
     @Override
     public String toString() {
-        return "topology [id=" + id + ", Components=" + components + "]";
+        return "topology [id= " + id + ", \nComponents=\n" + components + "]";
     }
 
 }
