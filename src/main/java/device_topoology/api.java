@@ -8,7 +8,7 @@ import org.json.simple.parser.ParseException;
 import java.util.*;
 import java.io.*;
 
-public class api {
+public class Api {
     HashMap<String, topology> topologies = new HashMap<String, topology>();
 
     public void saveTopology(topology topology) throws JSONException {
@@ -44,7 +44,7 @@ public class api {
 
     }
 
-    public void loadTopology(String fileName) {
+    public topology loadTopology(String fileName) {
         JSONParser parser = new JSONParser();
         try (FileReader reader = new FileReader(fileName)) {
             Object obj = parser.parse(reader);
@@ -75,10 +75,12 @@ public class api {
                 topology.getComponents().put(component.getId(), component);
             });
             topologies.put(topology.getId(), topology);
+            return topology;
         } catch (IOException | ParseException e) {
             System.err.println("An error occurred while parsing the file");
             e.printStackTrace();
         }
+        return null;
     }
 
     public Set<String> getTopologies() {
