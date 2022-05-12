@@ -26,7 +26,7 @@
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `fileName`      | `string` | **Required**. the filename of the file to save the topology to |
+| `fileName`      | `string` | **Required**. the filename of the file to load the topology from |
 
 #### Query about which topologies are currently in the memory
 
